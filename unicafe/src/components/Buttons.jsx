@@ -1,10 +1,13 @@
+import { useFeedbackStore } from '../store'
+
 const Buttons = () => {
+  const { setGood, setNeutral, setBad } = useFeedbackStore(state => state.actions)
   return (
     <div>
       <h2>give feedback</h2>
-      <button>good</button>
-      <button>neutral</button>
-      <button>bad</button>
+      <button onClick={setGood}>good</button>
+      <button onClick={setNeutral}>neutral</button>
+      <button onClick={setBad}>bad</button>
     </div>
   )
 }
