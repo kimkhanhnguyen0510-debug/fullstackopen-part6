@@ -30,7 +30,7 @@ export default defineConfig({
       command: "npx json-server --port 3001 --watch db-test.json",
       cwd: ".",
       url: "http://localhost:3001/anecdotes",
-      reuseExistingServer: !process.env.CI,
+      reuseExistingServer: false,
     },
   ],
 })
